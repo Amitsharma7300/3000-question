@@ -229,20 +229,20 @@ print(f"Reward: {random_question['coins']} coins")
 def run_quiz(category, difficulty, num_questions=10):
     with open('data/questions/all_questions.json') as f:
         questions = json.load(f)
-    
-    filtered = [q for q in questions 
-                if q['category'] == category 
+
+    filtered = [q for q in questions
+                if q['category'] == category
                 and q['difficulty'] == difficulty]
-    
+
     quiz_questions = random.sample(filtered, min(num_questions, len(filtered)))
-    
+
     score = 0
     for q in quiz_questions:
         print(f"\n{q['title']}")
         print(f"Description: {q['description']}")
         print(f"Hint: {q['solution_hint']}")
         # Get user answer and score
-    
+
     total_coins = sum(q['coins'] for q in quiz_questions)
     print(f"\nYou earned {score * 10} out of {total_coins} coins!")
 ```
@@ -366,7 +366,7 @@ Average Coins/Question: 26.3
 
 Breakdown by Difficulty:
 - Easy (10 coins): 1,150 questions = 11,500 coins
-- Medium (25 coins): 1,050 questions = 26,250 coins  
+- Medium (25 coins): 1,050 questions = 26,250 coins
 - Hard (50 coins): 850 questions = 42,500 coins
 
 Breakdown by Category:
