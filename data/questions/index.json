@@ -1,0 +1,16 @@
+{
+  "total_questions": 3050,
+  "categories": {
+    "loops": 450,
+    "arrays": 450,
+    "strings": 450,
+    "dsa": 1050,
+    "sql": 650
+  },
+  "difficulty_breakdown": {
+    "easy": 1150,
+    "medium": 1050,
+    "hard": 850
+  },
+  "total_coins": 80250
+}
